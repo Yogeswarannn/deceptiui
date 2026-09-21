@@ -1,0 +1,33 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+dataset/original/
+dataset/processed/
+
+# Model files
+models/*.pt
+models/*.pth
+models/*.bin
+models/*.safetensors
+models/*.joblib
+
+# Logs
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env

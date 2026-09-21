@@ -1,0 +1,23 @@
+# Core data processing
+pandas
+numpy
+openpyxl
+Pillow
+
+# OCR
+pytesseract
+
+# Machine learning
+scikit-learn
+joblib
+
+# Visualization / analysis
+matplotlib
+
+# Deep learning
+torch
+torchvision
+
+# Jupyter / experimentation
+jupyter
+ipykernel
