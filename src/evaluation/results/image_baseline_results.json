@@ -1,0 +1,45 @@
+{
+    "model": "ResNet-50 Image-Only",
+    "test_samples": 206,
+    "best_epoch": 9,
+    "threshold": 0.5,
+    "overall": {
+        "micro_precision": 0.7975,
+        "micro_recall": 0.7908,
+        "micro_f1": 0.7941,
+        "macro_f1": 0.7274,
+        "weighted_f1": 0.7917
+    },
+    "per_class": {
+        "Hard to Close": {
+            "precision": 0.939394,
+            "recall": 0.911765,
+            "f1": 0.925373,
+            "support": 102
+        },
+        "Default Choice": {
+            "precision": 0.75,
+            "recall": 0.571429,
+            "f1": 0.648649,
+            "support": 42
+        },
+        "False Hierarchy": {
+            "precision": 0.633333,
+            "recall": 0.883721,
+            "f1": 0.737864,
+            "support": 43
+        },
+        "Nagging": {
+            "precision": 0.742857,
+            "recall": 0.722222,
+            "f1": 0.732394,
+            "support": 36
+        },
+        "Privacy Zuckering": {
+            "precision": 0.727273,
+            "recall": 0.5,
+            "f1": 0.592593,
+            "support": 16
+        }
+    }
+}

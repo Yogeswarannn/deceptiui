@@ -31,3 +31,8 @@ Thumbs.db
 
 # Environment
 .env
+
+models/*.pth
+models/*.pt
+models/*.bin
+models/*.safetensors

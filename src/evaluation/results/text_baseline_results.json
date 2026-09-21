@@ -1,0 +1,44 @@
+{
+    "model": "TF-IDF + One-vs-Rest Logistic Regression",
+    "test_samples": 206,
+    "threshold": 0.5,
+    "overall": {
+        "micro_precision": 0.7838983050847458,
+        "micro_recall": 0.7740585774058577,
+        "micro_f1": 0.7789473684210526,
+        "macro_f1": 0.7310550743146945,
+        "weighted_f1": 0.7758750603003163
+    },
+    "per_class": {
+        "Hard to Close": {
+            "precision": 0.8666666666666667,
+            "recall": 0.8921568627450981,
+            "f1": 0.8792270531400966,
+            "support": 102
+        },
+        "Default Choice": {
+            "precision": 0.7777777777777778,
+            "recall": 0.8333333333333334,
+            "f1": 0.8045977011494253,
+            "support": 42
+        },
+        "False Hierarchy": {
+            "precision": 0.6578947368421053,
+            "recall": 0.5813953488372093,
+            "f1": 0.6172839506172839,
+            "support": 43
+        },
+        "Nagging": {
+            "precision": 0.7857142857142857,
+            "recall": 0.6111111111111112,
+            "f1": 0.6875,
+            "support": 36
+        },
+        "Privacy Zuckering": {
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1": 0.6666666666666666,
+            "support": 16
+        }
+    }
+}
