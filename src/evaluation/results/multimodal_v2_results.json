@@ -1,0 +1,9 @@
+{
+    "model": "multimodal_v2",
+    "test_samples": 206,
+    "micro_precision": 0.7490909090909091,
+    "micro_recall": 0.8619246861924686,
+    "micro_f1": 0.8015564202334631,
+    "macro_f1": 0.7475387985906613,
+    "weighted_f1": 0.8167045037369335
+}
