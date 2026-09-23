@@ -3,6 +3,12 @@ venv/
 .venv/
 __pycache__/
 *.py[cod]
+*$py.class
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
 
 # Jupyter
 .ipynb_checkpoints/
@@ -11,12 +17,17 @@ __pycache__/
 dataset/original/
 dataset/processed/
 
-# Model files
-models/*.pt
-models/*.pth
-models/*.bin
-models/*.safetensors
-models/*.joblib
+# Model binaries (weights exceed GitHub's 100MB limit)
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.joblib
+models/**/*.pth
+models/**/*.pt
+models/**/*.bin
+models/**/*.safetensors
+models/**/*.joblib
 
 # Logs
 logs/
@@ -31,8 +42,3 @@ Thumbs.db
 
 # Environment
 .env
-
-models/*.pth
-models/*.pt
-models/*.bin
-models/*.safetensors

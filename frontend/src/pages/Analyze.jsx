@@ -39,18 +39,37 @@ function Analyze() {
     event.preventDefault();
   };
 
-  const handleAnalyze = () => {
-    if (!image) return;
+  const handleAnalyze = async () => {
+    if (!image || !image.file) return;
 
     setIsAnalyzing(true);
 
-    setTimeout(() => {
+    try {
+      const formData = new FormData();
+      formData.append("image", image.file);
+
+      const response = await fetch("http://localhost:5000/api/analyze", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+
       navigate("/results", {
         state: {
           image: image.preview,
+          analysisData: data,
         },
       });
-    }, 2000);
+    } catch (error) {
+      console.error("Error analyzing image:", error);
+      alert("An error occurred during analysis. Make sure the backend server is running.");
+      setIsAnalyzing(false);
+    }
   };
 
   return (

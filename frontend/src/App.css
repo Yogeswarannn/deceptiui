@@ -1960,7 +1960,13 @@ body {
 
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.prediction-card.interactive {
+  cursor: pointer;
+  user-select: none;
 }
 
 .prediction-card:hover {
@@ -1968,6 +1974,68 @@ body {
 
   border-color: var(--border-purple);
 }
+
+.prediction-card.active {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.08);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.22);
+  transform: translateY(-2px);
+}
+
+.inspect-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+.inspect-badge span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 8px #a78bfa;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.view-mode-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.view-mode-button {
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 550;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-mode-button:hover {
+  color: #ffffff;
+  border-color: rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.view-mode-button.active {
+  background: rgba(139, 92, 246, 0.22);
+  color: #ffffff;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
 
 .prediction-top {
   display: flex;
